@@ -1,4 +1,4 @@
-$.fn.validate = function (options) {
+$.fn.verum = function (options) {
     var defaults = {
         'passClass': 'validation-pass',
         'failClass': 'validation-pass',
@@ -92,8 +92,6 @@ function checkRule(input, rule, extra) {
         case 'cellphone' :
             return /^(027|022|021|029|025){1}[0-9]{5,7}$/.test(input);
 
-        case 'password' :
-            return /^[\w !@#\$%\^&\*\(\)\{}\[\]'"<>,\.\?\+=\-\\\/~`;]*$/.test(input);
         case 'matches' :
             return $('[name=' + extra + ']').val() == input;
         default :
